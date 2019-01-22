@@ -14,7 +14,7 @@ if hash apt-get 2>/dev/null; then
             dosfstools libncurses5-dev lib32stdc++-5-dev debootstrap
 elif hash pacman 2>/dev/null; then
      pacman -Sy mtools uboot-tools pv bc \
-            qemu-user-static \
+            qemu-user-static swig dtc \
             dosfstools libstdc++5 debootstrap --noconfirm
 else
   whiptail --title "Orangepi Build System" --msgbox "This script requires a Debian or Archlinux based distribution. If you are using another distribution, install:[ bsdtar mtools u-boot-tools pv bc sunxi-tools gcc automake make qemu dosfstools ]" 10 50 0
